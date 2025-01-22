@@ -1,0 +1,96 @@
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+.wrapper {
+   overflow-y: auto;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #b896af;
+    cursor: pointer;
+    
+}
+.container{
+   margin: 0 auto;
+   padding: 20px;
+    height: 100%;
+    max-width:1200px;
+}
+.container h1{
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: #9e6d6d;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    font-size: 5rem;
+    margin: 20px 0;
+}
+.images {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content:space-around;
+    flex-direction: row;
+   
+}
+.cards {
+    overflow: hidden;
+    width: 34%;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    flex-direction: column;
+}
+
+.cards img{
+    animation:backwards 1s;
+    height: 100%;
+    object-fit: cover;
+    gap: 30px;
+    filter: opacity(0.5);
+    width:100%;
+    border-radius: 40px;
+    filter: grayscale(100%);
+    box-shadow: 2px solid rgba(7, 5, 5, 0.5);
+  
+}
+.cards:hover{
+    filter: opacity(1);
+    box-shadow: 2px solid rgba(7, 5, 5, 0.5);
+    transform: scale(1.1);
+    filter:drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
+    transition: cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+.cards:hover img{
+    filter: grayscale(0);
+}
+
+.cards figcaption{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgba(240, 237, 237, 0.5);
+    opacity: 0;
+    transition: cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+@keyframes mymove {
+    from {top: 0px;}
+    to {top: 200px;}
+  }
+  footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: fixed;   
+    font-size: 60px;
+    padding-top: 20px;
+    text-overflow: clip;
+
+  }
